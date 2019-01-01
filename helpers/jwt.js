@@ -16,6 +16,7 @@ function jwt() {
         }
       }).unless({
           path:[
+            '/',
             '/user'
           ]}
       )
