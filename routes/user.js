@@ -6,8 +6,6 @@ var userController = require('../controllers/userController');
 
 router.post('/register',userController.register);
 router.post('/',userController.login);
-router.get('/',  jwt({secret: secret}),
-    function(req, res) {
-        res.send("sadasd");
-});
+router.get('/protected', userController.protected);
+
 module.exports = router;
